@@ -13,6 +13,17 @@
 		.item{position:absolute;height: auto;}
 		section{width: 1400px; margin: auto; text-align: center;}
 		h1{position: absolute; top: 0; bottom: 0; left: 0; right: 0; height: 40px; margin: auto; font-weight:normal; font-size: 2.5em;}
+
+
+		.ani{animation:ani 0.4s infinite alternate ease ;}
+		@keyframes ani{
+			from{top: 310px;}
+			to{top: 300px;}
+		}
+
+
+
+
 	</style>
 
 </head>
@@ -22,16 +33,20 @@
 </header>
 
 
+
 <section>
 	<div class="flex">
 			<!-- <img src='2-2.png' class="item" style=" height: 432.41px;bottom:0px; left:246px"> -->
 			<!-- <img src='2.gif' id='me' class="item" style=" height: 432.41px; bottom:0px; left:246px"> -->
+
+
 <figure>
 	<img src="2-2.png" class="item" style=" height: 432.41px;bottom:0px; left:266px" alt="Static Image" data-alt="2.gif" onclick="toggleImg()">
 </figure>
 			<img src='4.png' id='img' class="item" style=" width: 82%; left: 105px; ; bottom:25px;z-index: -1;">
 
-
+			<img src='1.png' class="item ani" style=" width: 6%; left: 630px; 
+			top:300px; z-index: 2;">
 
 
 			<a href="https://serena0412.github.io/21.12.08.main/" target_self>
