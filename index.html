@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>날씨탓</title>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans:400');
+		body{margin: 0px;overflow-x: hidden; font-family: 'Black Han Sans', sans-serif; background-color: #ef422d;background-size: 100%; overflow-y: hidden;}
+		header{height: 120px; background-color: #a4dded;  border-bottom:solid 5px #000000; text-align: center; position:relative}
+		div{position:relative; height: 600px; width: 1400px;}
+		.flex{display:flex;}
+		.item{position:absolute;height: auto;}
+		section{width: 1400px; margin: auto; text-align: center;}
+		h1{position: absolute; top: 0; bottom: 0; left: 0; right: 0; height: 40px; margin: auto; font-weight:normal; font-size: 2.5em;}
+	</style>
+
+</head>
+<body>
+<header>
+<h1>일기 예보를 조정해 교육청마저 인정한 등교하기 최악인 날씨를 만들어보세요!</h1>
+</header>
+
+
+<section>
+	<div class="flex">
+			<!-- <img src='2-2.png' class="item" style=" height: 432.41px;bottom:0px; left:246px"> -->
+			<!-- <img src='2.gif' id='me' class="item" style=" height: 432.41px; bottom:0px; left:246px"> -->
+<figure>
+	<img src="2-2.png" class="item" style=" height: 432.41px;bottom:0px; left:266px" alt="Static Image" data-alt="2.gif" onclick="toggleImg()">
+</figure>
+			<img src='4.png' id='img' class="item" style=" width: 82%; left: 105px; ; bottom:25px;z-index: -1;">
+
+
+
+
+			<a href="https://serena0412.github.io/21.12.08.main/" target_self>
+			<img src='back.png' class="item" style=" width: 15%; left: 0px;bottom:40px;z-index: 0;">
+			</a>
+	</div>
+
+
+
+
+
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+<script src="js/script-min.js"></script>
+
+<script type="text/javascript">
+		var imgArray= new Array();
+		         imgArray[0]="5.png";  
+		        imgArray[1]="6.png"; 
+		        imgArray[2]="7.png";   
+		        imgArray[3]="8.png";
+		        imgArray[4]="9.png";    
+        
+		 var msgArray = new Array();
+			msgArray[0] = "[교육청] 금일 극심한 폭우로 인해 정상 등교가 어렵습니다. 학생 여러분은 자택에 안전히 머물러주시길 바랍니다. ";
+			msgArray[1] = "[교육청] 금일 극심한 강풍으로 인해 정상 등교가 어렵습니다. 학생 여러분은 자택에 안전히 머물러주시길 바랍니다. ";
+			msgArray[2] = "[교육청] 금일 극심한 폭염으로 인해 정상 등교가 어렵습니다. 학생 여러분은 자택에 안전히 머물러주시길 바랍니다. ";
+			msgArray[3] = "[교육청] 금일 극심한 폭설로 인해 정상 등교가 어렵습니다. 학생 여러분은 자택에 안전히 머물러주시길 바랍니다. ";
+			msgArray[4] = "[교육청] 정상 등교입니다.";
+      
+
+        function toggleImg()
+        {	
+			var imgNum;
+			setTimeout(function() { 
+				imgNum=Math.round(Math.random()*4);
+				var objImg=document.getElementById("img");
+				objImg.src=imgArray[imgNum];
+			}, 500);
+			
+			setTimeout(function() { 
+				showMessage(imgNum);
+			}, 1200);
+		}
+       
+	    function showMessage(imgNum)
+		{
+			setTimeout(alert(msgArray[imgNum]), 1000);
+		}
+
+		
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
